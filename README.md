@@ -14,3 +14,8 @@ Sentiment analysis, area penting dalam Natural Language Processing, adalah prose
 
 Ada banyak sumber sentimen publik, mis. wawancara publik, jajak pendapat, survei, dll. Namun, dengan semakin banyak orang bergabung dengan platform media sosial, situs web seperti Facebook dan Twitter dapat diurai untuk sentimen publik. <br />
 <br />
+
+### Author <br/>
+Muhammad Fadlan Fasya
+Lidya Listra
+Ari Septian
