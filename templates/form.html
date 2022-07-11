@@ -9,27 +9,26 @@
   </head>
 
   <body>
-    <div class="mx-auto bg-gradient-to-r from-teal-200 to-lime-200">
-	    <div class="p-5 text-center bg-gradient-to-r from-teal-200 to-lime-200">
-		    <h1 class="text-4xl font-bold p-2">Sentiment Analysis Web App</h1>
-		    <p>A machine learning end to end flask web app for <b>"Sentiment Analysis" </b>model created using Scikit-learn.</p> 
+    <div class="container mx-auto bg-white">
+	    <div class="mx-32 p-4 py-10 bg-blue-700 border-x-2 border-slate-300 shadow-md">
+		    <h1 class="text-3xl font-bold text-white">Sentiment Analysis Web App</h1>
+		    <!-- <p>A machine learning end to end flask web app for <b>"Sentiment Analysis" </b>model created using Scikit-learn.</p>  -->
 	    </div>
-		  </br></br>
-      <div align="center">
+      <div align="center" class="pt-10 mx-32 border-x-2 border-slate-300">
 			  <form method="POST">
 				  <textarea class="px-3 py-1 border-1 border-slate-400 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium font-bold rounded-lg" name="text1" placeholder="Text Something: ...." rows="10" cols="109"></textarea><br><br>
-          <button type="submit" class="text-black bg-teal-500 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium font-bold rounded-lg text-sm px-7 py-4 text-center mr-2 mb-2">Submit</button>
+          <button type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">Submit</button>
 			  </form>
 		  </div>
       {% if final %}
 		
 <!--result start -->		 
       <div align="center">
-      </br></br>
-      <div class="container pb-5 relative overflow-x-auto bg-gradient-to-r from-lime-200 via-lime-100 to-lime-100">
-        <h2 class="p-5 text-center text-2xl font-bold">The Sentiment of '{{ text1 }}' is <span class="text-red-800">{{ final *100}}%</span> positive !</h2>
-			  <h2 class="font-bold text-2xl">Score table</h2>
-        <table class="text-sm text-left border-collapse border border-slate-500">
+      <div class="container relative overflow-x-auto">
+        <div class="mx-32 pb-5 bg-blue-700 shadow-md border-x-2 border-slate-300">
+        <h2 class="p-5 text-center text-2xl font-bold text-white">The Sentiment of '{{ text1 }}' is <span class="text-red-500">{{ final *100}}%</span> positive !</h2>
+			  <h2 class="font-bold text-2xl text-white">Score table</h2>
+        <table class="text-sm text-left text-white border-collapse border border-white">
           <thead class="text-md uppercase">
           <tr>
             <th class="border border-slate-600 px-3 text-xl">SENTIMENT METRIC</th>
@@ -53,14 +52,49 @@
             <td class="border border-slate-600 px-3">{{text4}}</td>
           </tr>
         </table>
+        </div>
       </div>
     {% else %}
     <p></p>
     {% endif %}
     </div>
-    </br></br>
-<!--result end -->			
+<!--result end -->	
+<div class="mx-32 p-4 pb-10 pt-10 bg-white border-x-2 border-slate-300 space-y-5">
+  <h2 class="text-2xl font-bold">About App</h2>
+  <p class="">
+    Sentiment analysis, area penting dalam Natural Language Processing, adalah proses mendeteksi status afektif teks secara otomatis. Analisis sentimen diterapkan secara luas pada materi suara pelanggan seperti ulasan produk di situs belanja online seperti Amazon, ulasan film, atau media sosial. Ini bisa menjadi tugas dasar mengklasifikasikan polaritas teks sebagai positif <br />
+    Ada banyak sumber sentimen publik, mis. wawancara publik, jajak pendapat, survei, dll. Namun, dengan semakin banyak orang bergabung dengan platform media sosial, situs web seperti Facebook dan Twitter dapat diurai untuk sentimen publik. <br />
+<br />
+  </p>
+</div>
+<div class="mx-32 p-4 pb-10 border-x-2 border-b-2 border-slate-300 space-y-6">
+  <h2 class="text-2xl text-center font-bold">Our Teams</h2>
+  <div class="grid grid-cols-3 gap-4">
+  <div class="max-w-sm bg-blue-700 rounded-lg shadow-md">
+      <div class="flex flex-col items-center pb-10">
+          <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+          <h5 class="mb-1 text-xl font-medium text-white">Bonnie Green</h5>
+          <span class="text-sm text-white">Visual Designer</span>
+      </div>
   </div>
+  <div class="max-w-sm bg-blue-700 rounded-lg shadow-md">
+    <div class="flex flex-col items-center pb-10">
+        <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+        <h5 class="mb-1 text-xl font-medium text-white">Bonnie Green</h5>
+        <span class="text-sm text-white">Visual Designer</span>
+    </div>
+  </div>
+  <div class="max-w-sm bg-blue-700 rounded-lg shadow-md">
+    <div class="flex flex-col items-center pb-10">
+        <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+        <h5 class="mb-1 text-xl font-medium text-white">Bonnie Green</h5>
+        <span class="text-sm text-white">Visual Designer</span>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+
   <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
   </body>
 </html>
